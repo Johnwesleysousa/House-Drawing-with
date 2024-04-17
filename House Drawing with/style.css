@@ -1,0 +1,383 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #ccc;
+}
+
+.house{
+    position: relative;
+    width: 700px;
+    height: 350px;
+    /* background-color: #ccc; */
+    border-bottom: 8px solid #175117;
+}
+
+.main{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 200px;
+    background-color: #f9f9f9;
+}
+
+.main::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.roof{
+    position: absolute;
+    top: -100px;
+    height: 100px;
+    width: 100%;
+    /* background-color: #ff0; */
+}
+
+.roof::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background-color: #257582;
+    transform: skewX(330deg);
+}
+
+.roof::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background-color: #257582;
+    transform: skewX(30deg);
+    /* border: 2px solid red; */
+    z-index: -1;    /*Ganbiarra minha*/
+}
+
+.front{
+    position: absolute;
+    bottom: 0;
+    /*margin-top: 20px; /*Ganbiarra minha*/
+    /*top: 100%;        /*Ganbiarra minha*/
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 180px;
+    background-color: #f1f1f1;
+}
+
+.front::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -64px;
+    width: 126px;
+    height: 126px;
+    background-color: #f1f1f1;
+    transform: translateX(-50%) rotate(45deg);
+    border-top: 4px solid #222;
+    border-left: 4px solid #222;
+}
+
+.front::after{
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 60px;
+    background-color: #333;
+    background-image: linear-gradient(to right, transparent 10%, transparent 90%, #333 90%), linear-gradient(to bottom, transparent 10%, #6d6d7d 10%, #6d6d7d 90%);
+    background-size: 10px 15px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border: 4px solid #333;
+}
+
+.door{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 80px;
+    background-color: #4d2418;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+
+    /* border: 5px solid red; */
+}
+
+.door::before{
+    content: '';
+    position: absolute;
+    left: -45px;
+    top: 30px;
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    background-image: linear-gradient(to right, transparent 10%, transparent 90%, #333 90%), linear-gradient(to bottom, transparent 10%, #6d6d7d 10%, #6d6d7d 90%);
+    background-size: 10px 10px;
+    border: 2px solid #333;
+    border-top: 5px solid #333;
+    border-bottom: 5px solid #333;
+}
+
+.door::after{
+    content: '';
+    position: absolute;
+    right: -45px;
+    top: 30px;
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    background-image: linear-gradient(to right, transparent 10%, transparent 90%, #333 90%), linear-gradient(to bottom, transparent 10%, #6d6d7d 10%, #6d6d7d 90%);
+    background-size: 10px 10px;
+    border: 2px solid #333;
+    border-top: 5px solid #333;
+    border-bottom: 5px solid #333;
+}
+
+.line{
+    position: absolute;
+    top: 38%;
+    width: 100%;
+    height: 12px;
+    border-top: 4px solid #257582;
+    border-bottom: 4px solid #257582;
+
+}
+
+.adjst{
+    top: 45%;
+}
+
+.windows_right{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 60px;
+    height: 50px;
+    background-color: #333;
+    background-image: linear-gradient(to right, transparent 10%, transparent 90%, #333 90%), linear-gradient(to bottom, transparent 10%, #6d6d7d 10%, #6d6d7d 90%);
+    background-size: 10px 10px;
+    border: 2px solid #333;
+    border-top: 5px solid #333;
+    border-bottom: 5px solid #333;
+
+}
+
+.windows_right::before{
+    content: '';
+    position: absolute;
+    top: 90px;
+    width: 50px;
+    height: 60px;
+    background-color: #333;
+    background-image: linear-gradient(to right, transparent 10%, transparent 90%, #333 90%), linear-gradient(to bottom, transparent 10%, #6d6d7d 10%, #6d6d7d 90%);
+    background-size: 10px 10px;
+    border: 2px solid #333;
+    /* /* border-top: 5px solid #333; */
+    border-bottom: 5px solid #333; 
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+}
+
+
+.windows_left{
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    width: 60px;
+    height: 50px;
+    background-color: #333;
+    background-image: linear-gradient(to right, transparent 10%, transparent 90%, #333 90%), linear-gradient(to bottom, transparent 10%, #6d6d7d 10%, #6d6d7d 90%);
+    background-size: 10px 10px;
+    border: 2px solid #333;
+    border-top: 5px solid #333;
+    border-bottom: 5px solid #333;
+
+}
+
+.windows_left::before{
+    content: '';
+    position: absolute;
+    top: 90px;
+    width: 50px;
+    height: 60px;
+    background-color: #333;
+    background-image: linear-gradient(to right, transparent 10%, transparent 90%, #333 90%), linear-gradient(to bottom, transparent 10%, #6d6d7d 10%, #6d6d7d 90%);
+    background-size: 10px 10px;
+    border: 2px solid #333;
+    /* /* border-top: 5px solid #333; */
+    border-bottom: 5px solid #333; 
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+}
+
+.side{
+    position: absolute;
+    background: #f1f1f1;
+    bottom: 0;
+    left: -120px;
+    width: 140px;
+    height: 140px;
+}
+
+.side::before{
+    content: '';
+    position: absolute;
+    top: -52px;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: #f1f1f1;
+    transform: translateX(-50px) rotate(45deg);
+    border-top: 4px solid #222;
+    border-left: 4px solid #222;
+}
+
+.side::after{
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 40px;
+    background-color: #333;
+    background-image: linear-gradient(to right, transparent 10%, transparent 90%, #333 90%), linear-gradient(to bottom, transparent 10%, #6d6d7d 10%, #6d6d7d 90%);
+    background-size: 10px 10px;
+    border: 2px solid #333;
+    /* /* border-top: 5px solid #333; */
+    /* border-bottom: 5px solid #333;  */
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;    
+}
+
+.side .line{
+    transform: translateY(-23px);
+}
+
+
+.windows{
+    position: absolute;
+    top: 60px;
+    left: 30px;
+    width: 80px;
+    height: 70px;
+    background-color: #333;
+    background-image: linear-gradient(to right, transparent 10%, transparent 90%, #333 90%), linear-gradient(to bottom, transparent 10%, #6d6d7d 10%, #6d6d7d 90%);
+    background-size: 10px 10px;
+    border: 2px solid #333;
+    border-top: 5px solid #333;
+    border-bottom: 5px solid #333;
+}
+
+.tree{
+    position: absolute;
+    right: -120px;
+    top: -10px;
+    width: 120px;
+    height: 120px;
+    background-color: #94ab38;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    transform: rotate(315deg);
+}
+
+.tree::before{
+    content: '';
+    position: absolute;
+    top: 85px;
+    left: -20px;
+    width: 10px;
+    height: 100px;
+    background-color: #3c2703;
+    transform: rotate(45deg);
+}
+
+.tree2{
+    top: -50px;
+    right: -70px;
+    background-color: #7b921f;
+    transform: rotate(315deg) scale(1.25);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 
+A diferença entre ::before e ::after no CSS é a seguinte:
+
+- ::before insere conteúdo antes do conteúdo do elemento alvo.
+- ::after insere conteúdo depois do conteúdo do elemento alvo.
+
+Assim, o ::before adiciona conteúdo antes do elemento e o ::after adiciona conteúdo depois do elemento no DOM, permitindo estilizar e personalizar elementos de forma mais flexível. */
+
+
+
+/* ::after  */
+
+/* O ::after é um pseudo-elemento do CSS que permite adicionar conteúdo após o conteúdo de um elemento HTML. Ele é frequentemente utilizado para adicionar elementos decorativos, como linhas, ícones ou simplesmente para estilizar um elemento de forma mais flexível. O ::after é inserido após o conteúdo do elemento pai, mas antes de qualquer conteúdo inserido com a propriedade content. Ele é muito útil para criar layouts complexos e adicionar detalhes visuais aos elementos da página. */
+
+/* left 50%
+transform: translateX -50%  
+centraliza o elemento melhor com as duas propriedades */
+
+
+
+
+
+
+
+
+
+/* transform: skewX(330deg); */
+
+/* A propriedade transform: skewX(330deg); no CSS é utilizada para inclinar um elemento ao longo do eixo X, criando um efeito de inclinação horizontal. Com um valor de 330 graus, o elemento será inclinado muito acentuadamente para a direita. Esta propriedade é útil para criar designs criativos e dinâmicos em uma página da web. */
+
+/* ------------------------------------------------------------------------- */
+
+/* ::before */
+
+/* A propriedade ::before no CSS é utilizada para adicionar conteúdo antes do elemento selecionado. Ela é utilizada em conjunto com a propriedade "content" para inserir texto, imagem ou outros elementos antes do elemento alvo. Esta propriedade é comumente utilizada para adicionar elementos decorativos ou ícones antes de um texto, por exemplo. */
+
+/* ------------------------------------------------------------------------- */
+
+/* transform: translateX(-50%); */
+
+/* A propriedade `transform: translateX(-50%);` no CSS serve para mover um elemento horizontalmente em relação ao seu próprio tamanho. O valor negativo (-50%) significa que o elemento será deslocado para a esquerda em 50% de sua largura, o que o coloca no centro horizontal da tela. Essa propriedade de transformação é frequentemente usada para posicionar elementos de forma precisa e responsiva em um layout. */
+
+/* ------------------------------------------------------------------------- */
+
+/* position relaive */
+
+/* A propriedade `position: relative;` no CSS é utilizada para posicionar um elemento no contexto do seu próprio container, ou seja, em relação à sua posição original. Isso significa que ao usar essa propriedade, o elemento ainda ocupará o seu espaço na página, mas poderá ser movido para cima, para baixo, para a esquerda ou para a direita em relação à sua posição inicial. Isso é útil para ajustar a posição de elementos dentro de um layout, sem interferir na disposição dos outros elementos na página. */
